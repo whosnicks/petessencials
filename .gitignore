@@ -1,0 +1,55 @@
+# ignore everything in the root except the "wp-content" directory.
+/*
+!wp-content/
+
+# ignore everything in the "wp-content" directory, except:
+# mu-plugins, plugins, and themes directories
+wp-content/*
+!wp-content/mu-plugins/
+!wp-content/plugins/
+!wp-content/themes/
+
+# ignore all mu-plugins, plugins, and themes
+# unless explicitly whitelisted at the end of this file
+wp-content/mu-plugins/*
+wp-content/plugins/*
+wp-content/themes/*
+
+# ignore all files starting with . or ~
+.*
+~*
+
+# ignore node dependency directories (used by grant)
+node_modules/
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# -------------------------
+# BEGIN Whitelisted Files
+# -------------------------
+
+# track these files, if they exist
+!.gitignore
+!.editorconfig
+!.phpcs.xml.dist
+!README.md
+!CHANGELOG.md
+!.env.example
+
+# track these mu-plugins, plugins, and themes
+!wp-content/mu-plugins/animals.php
+!wp-content/plugins/campaign-manager
+!wp-content/themes/petessencials
